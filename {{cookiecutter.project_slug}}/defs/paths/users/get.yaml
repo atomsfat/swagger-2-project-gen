@@ -1,0 +1,21 @@
+tags:
+  - mock
+  - admin
+operationId: getPaginatedUsers
+summary: Get latest User order by date DESC
+consumes:
+  - application/json
+produces:
+  - application/json
+parameters:
+  - $ref: '#/parameters/pagination'
+  - $ref: '#/parameters/queryOutput'
+  - $ref: '#/parameters/search'
+responses:
+  200:
+    description: Get users ordered by creation date
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/User'
+      maxItems: 10

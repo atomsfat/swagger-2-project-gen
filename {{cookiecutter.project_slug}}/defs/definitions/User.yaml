@@ -1,0 +1,40 @@
+required:
+  - pool_id
+  - pool_name
+  - external_id
+  - firstName
+  - lastName
+  - phoneNumber
+properties:
+  id:
+    type: string
+    pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+    format: uuid
+  pool_id:
+    type: string
+    maxLength: 255
+    fake: 'random.alphaNumeric'
+  external_id:
+    type: string
+    maxLength: 255
+    fake: 'random.alphaNumeric'
+  pool_name:
+    type: string
+    maxLength: 255
+  firstName:
+    type: string
+    maxLength: 30
+    fake: 'name.firstName'
+  lastName:
+    type: string
+    maxLength: 30
+    fake: 'name.lastName'
+  phoneNumber:
+    type: string
+    maxLength: 30
+    fake: 'name.phoneNumber'
+  createDate:
+    type: string
+    format: date-time
+    faker: 'date.soon'
+type: object

@@ -1,0 +1,28 @@
+swagger: '2.0'
+info:
+  description: {{cookiecutter.project_desc}}
+  version: 0.1.1
+  title: {{cookiecutter.api_title}}
+  contact:
+    name: {{cookiecutter.project_author}}
+  license:
+    name: {{cookiecutter.project_license}}
+
+tags:
+- name: webapp
+  description: General public endpoints
+- name: admin
+  description: Admin Backend endpoints
+- name: backend
+  description: Internal endpoints
+- name: production
+  description: End points ready to end-users/clients
+- name: mock
+  description: Mocked endpoints
+
+paths: !!inc/dir ['paths']
+definitions: !!inc/dir ['definitions', {recursive: false, allowEmpty: false}]
+parameters:
+  pagination: !!inc/file 'helpers/pagination.yaml'
+  queryOutput: !!inc/file 'helpers/queryOutput.yaml'
+  search: !!inc/file 'helpers/search.yaml'

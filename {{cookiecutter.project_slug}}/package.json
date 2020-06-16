@@ -1,0 +1,29 @@
+{
+  "name": "{{cookiecutter.project_slug}}",
+  "version": "0.1.0",
+  "private":true,
+  "description": "{{cookiecutter.project_desc}}",
+  "main": "dist/api-spec.yaml",
+  "scripts": {
+    "start": "npm run watch-yaml & npm run watch-index & npm run webserver",
+    "watch-yaml": "node_modules/.bin/chokidar 'defs/' --initial -c 'node join-yaml.js'",
+    "watch-index": "node_modules/.bin/chokidar 'index.html' --initial -c 'cp index.html dist'",
+    "webserver": "node test-webserver.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "",
+    "build": "node join-yaml.js",
+    "build-all": "node join-yaml.js && cp index.html dist",
+    "lint": "node_modules/.bin/eslint ."
+  },
+  "author": "{{cookiecutter.project_author}}",
+  "license": "{{cookiecutter.project_license}}",
+  "dependencies": {
+    "js-yaml": "^3.14.0",
+    "yaml-include": "^1.2.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "finalhandler": "^1.1.2",
+    "serve-static": "^1.14.1"
+  }
+}

@@ -1,0 +1,27 @@
+tags:
+  - webapp
+  - mock
+operationId: postUser 
+summary: Create user
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: body
+    name: User
+    schema:
+      $ref: '#/definitions/User'
+responses:
+  200:
+    description: User created
+    schema:
+      $ref: '#/definitions/User'
+  '4XX':
+    description: Error
+    schema:
+      $ref: '#/definitions/Message'
+  '5XX':
+    description: Error
+    schema:
+      $ref: '#/definitions/Message'

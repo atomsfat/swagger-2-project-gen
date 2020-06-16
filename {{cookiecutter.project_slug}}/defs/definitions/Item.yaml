@@ -1,0 +1,16 @@
+required:
+  - desc
+  - purchaseID
+properties:
+  id:
+    type: string
+    pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+    format: uuid
+  desc:
+    type: string
+    maxLength: 255
+  purchaseID:
+    type: string
+    pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+    format: uuid
+type: object
