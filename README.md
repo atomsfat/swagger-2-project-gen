@@ -1,12 +1,12 @@
-# Swagger 2 API - Base Project Generator
+# Swagger 2 API - Project Generator
 
 ## How to use it
 
 Go to the directory where you want to create your project and run:
 
-``bash
+```bash
 pip install cookiecutter
-cookiecutter https://github.com/atomsfat/swagger-2-gen
+cookiecutter https://github.com/atomsfat/swagger-2-project-gen
 ```
 
 ### Input variables
@@ -14,13 +14,10 @@ cookiecutter https://github.com/atomsfat/swagger-2-gen
 The generator (cookiecutter) will ask you for some data, you might want to have at hand before generating the project.
 
 The input variables, with their default values (some auto generated) are:
-*  `project_name`: The name of the project name
+*  `project_name`: The name of the project
 *  `project_desc`: Project description
 *  `project_author`: Project author
 *  `project_license`: Apache 2.0
-*  `api_title`: API title
-*  `api_contact`: API contact
-*  `api_license`: Apache 2.0
 
 ## More details
 

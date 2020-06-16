@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run watch-yaml & npm run watch-index & npm run webserver",
     "watch-yaml": "node_modules/.bin/chokidar 'defs/' --initial -c 'node join-yaml.js'",
-    "watch-index": "node_modules/.bin/chokidar 'index.html' --initial -c 'cp index.html dist'",
+    "watch-index": "mkdir -p dist && node_modules/.bin/chokidar 'index.html' --initial -c 'cp index.html dist/'",
     "webserver": "node test-webserver.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "",
